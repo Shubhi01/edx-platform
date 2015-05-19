@@ -269,7 +269,6 @@ class StaticTabDateTestCase(LoginEnrollmentTestCase, ModuleStoreTestCase):
             self.assertIn("this module is temporarily unavailable", static_tab)
 
 
-@attr('shard_1')
 class StaticTabDateTestCaseXML(LoginEnrollmentTestCase, ModuleStoreTestCase):
     """
     Tests for the static tab dates of an XML course
@@ -303,7 +302,6 @@ class StaticTabDateTestCaseXML(LoginEnrollmentTestCase, ModuleStoreTestCase):
         self.assertIn(self.xml_data, resp.content)
 
 
-@attr('shard_1')
 class EntranceExamsTabsTestCase(LoginEnrollmentTestCase, ModuleStoreTestCase):
     """
     Validate tab behavior when dealing with Entrance Exams
