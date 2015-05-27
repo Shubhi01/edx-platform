@@ -1,11 +1,12 @@
 ;(function (define, undefined) {
     'use strict';
 
-    // Hack: how can we set this correctly so that RequireJS.text can see it?
-    window.define = define;
-
     define(['jquery', 'teams/js/views/teams_tab'],
         function ($, TeamsTabView) {
+
+            // TODO: remove-- only here for testing purposes.
+            $("body").append("<div class='added'>test text</div>");
+
             return function () {
                 var view = new TeamsTabView({
                     el: $('.team-tab-content')

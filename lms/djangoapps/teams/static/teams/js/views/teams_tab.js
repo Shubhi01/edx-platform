@@ -1,13 +1,12 @@
 ;(function (define, undefined) {
     'use strict';
-    // TODO: we aren't actually requirejs text!
-    define(['backbone', 'underscore', 'text!teams/js/templates/teams_tab.underscore'],
-        function (Backbone, _, teamsTabTemplate) {
+
+    define(['backbone', 'underscore'],
+        function (Backbone, _) {
             var TeamTabView = Backbone.View.extend({
                 render: function() {
-                    this.$el.html(_.template(teamsTabTemplate, {
-
-                    }));
+                    var template_text = $('#teams-tab-tpl').text();
+                    this.$el.html(_.template(template_text));
                     return this;
                 }
             });

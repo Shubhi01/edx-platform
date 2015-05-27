@@ -64,10 +64,12 @@ lib_paths:
 src_paths:
     - js
     - js/common_helpers
+    - teams/js
 
 # Paths to spec (test) JavaScript files
 spec_paths:
     - js/spec
+    - teams/js/spec
 
 # Paths to fixture files (optional)
 # The fixture path will be set automatically when using jasmine-jquery.
@@ -91,6 +93,7 @@ fixture_paths:
     - js/fixtures/edxnotes
     - js/fixtures/search
     - templates/search
+    - teams/templates
 
 requirejs:
   paths:
