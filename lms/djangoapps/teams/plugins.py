@@ -14,7 +14,6 @@ class TeamsCourseViewType(CourseViewType):
     name = "edx.teams"
     title = _("Teams")
     view_name = "teams_dashboard"
-    is_persistent = True
 
     @classmethod
     def is_enabled(cls, course, settings, user=None):  # pylint: disable=unused-argument
