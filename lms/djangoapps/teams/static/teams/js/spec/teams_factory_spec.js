@@ -1,5 +1,5 @@
-define(["jquery", "js/common_helpers/template_helpers", "teams/js/teams_tab_factory"],
-    function($, TemplateHelpers, TeamsTabFactory) {
+define(["jquery", "teams/js/teams_tab_factory"],
+    function($, TeamsTabFactory) {
         'use strict';
        
         describe("teams django app", function() {
@@ -7,12 +7,7 @@ define(["jquery", "js/common_helpers/template_helpers", "teams/js/teams_tab_fact
 
             beforeEach(function() {
                 setFixtures("<div class='team-tab-content'></div>");
-                TemplateHelpers.installTemplate('teams/templates/teams-tab');
                 teamsTab = new TeamsTabFactory();
-            });
-
-            it("can require JS file in teams", function() {
-                expect($("div.added").text()).toBe("test text");
             });
 
             it("can load templates", function() {

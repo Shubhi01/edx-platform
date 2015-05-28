@@ -25,6 +25,7 @@
             'jquery.url': 'xmodule_js/common_static/js/vendor/url.min',
             'datepair': 'xmodule_js/common_static/js/vendor/timepicker/datepair',
             'date': 'xmodule_js/common_static/js/vendor/date',
+            'text': 'xmodule_js/common_static/js/vendor/requirejs/text',
             'underscore': 'xmodule_js/common_static/js/vendor/underscore-min',
             'underscore.string': 'xmodule_js/common_static/js/vendor/underscore.string.min',
             'backbone': 'xmodule_js/common_static/js/vendor/backbone-min',

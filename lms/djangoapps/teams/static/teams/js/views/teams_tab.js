@@ -1,13 +1,11 @@
-;(function (define, undefined) {
+;(function (define) {
     'use strict';
 
-    define(['backbone', 'underscore'],
-        function (Backbone, _) {
+    define(['backbone', 'underscore', 'text!teams/templates/teams-tab.underscore'],
+        function (Backbone, _, teamsTabTemplate) {
             var TeamTabView = Backbone.View.extend({
                 render: function() {
-                    var template_text = $('#teams-tab-tpl').text();
-                    this.$el.html(_.template(template_text));
-                    return this;
+                    this.$el.html(_.template(teamsTabTemplate, {}));
                 }
             });
 

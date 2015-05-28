@@ -1,12 +1,8 @@
-;(function (define, undefined) {
+;(function (define) {
     'use strict';
 
     define(['jquery', 'teams/js/views/teams_tab'],
         function ($, TeamsTabView) {
-
-            // TODO: remove-- only here for testing purposes.
-            $("body").append("<div class='added'>test text</div>");
-
             return function () {
                 var view = new TeamsTabView({
                     el: $('.team-tab-content')
