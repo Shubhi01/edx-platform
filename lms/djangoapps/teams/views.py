@@ -1,3 +1,7 @@
+"""
+View methods for the course team feature.
+"""
+
 from django.shortcuts import render_to_response
 from opaque_keys.edx.keys import CourseKey
 from courseware.courses import get_course_with_access
