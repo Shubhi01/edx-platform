@@ -2,9 +2,9 @@
 Definition of the course team feature.
 """
 
-from django.conf import settings
 from django.utils.translation import ugettext as _
 from courseware.tabs import EnrolledCourseViewType
+from .views import is_feature_enabled
 
 
 class TeamsCourseViewType(EnrolledCourseViewType):
@@ -28,4 +28,7 @@ class TeamsCourseViewType(EnrolledCourseViewType):
         if not super(TeamsCourseViewType, cls).is_enabled(course, user=user):
             return False
 
-        return settings.FEATURES.get('ENABLE_TEAMS', False) and course.teams_enabled
+        if not user:
+            return False
+
+        return is_feature_enabled(course)
